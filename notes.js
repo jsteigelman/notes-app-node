@@ -7,9 +7,7 @@ const getNotes = () => {
 
 const addNote = (title, body) => {
     const notes = loadNotes()
-    const duplicateNotes = notes.filter((note) => {
-        return note.title === title
-    })
+    const duplicateNotes = notes.filter((note) => note.title === title)
 
     if (duplicateNotes.length === 0) {
         notes.push({
@@ -18,7 +16,6 @@ const addNote = (title, body) => {
         })
         saveNotes(notes)
         console.log(chalk.blue.inverse.bold('Note successfully added.'))
-
     } else {
         console.log(chalk.magentaBright.inverse.bold('The note title is a duplicate; the note has not been added.'))
     }
@@ -26,9 +23,7 @@ const addNote = (title, body) => {
 
 const removeNote = (title) => {
     const notes = loadNotes()
-    const newNotes = notes.filter((note) => {
-        return note.title !== title
-    })
+    const newNotes = notes.filter((note) => note.title !== title)
     
     if (notes.length !== newNotes.length) {
         console.log(chalk.blue.inverse.bold('Note successfully removed.'))
@@ -51,7 +46,6 @@ const loadNotes = () => {
     } catch (e) {
         return []
     }
-
 }
 
 module.exports = {
