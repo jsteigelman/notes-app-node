@@ -1,4 +1,5 @@
 const fs = require('fs')
+const chalk = require('chalk')
 
 const getNotes = () => {
     return "Notes..."
@@ -20,8 +21,20 @@ const addNote = (title, body) => {
     } else {
         console.log('The note title is a duplicate; the note has not been added.')
     }
+}
 
-
+const removeNote = (title) => {
+    const notes = loadNotes()
+    const newNotes = notes.filter((note) => {
+        return note.title !== title
+    })
+    
+    if (notes.length !== newNotes.length) {
+        console.log(chalk.blue.inverse.bold('Note successfully removed.'))
+        saveNotes(newNotes)
+    } else {
+        console.log(chalk.magentaBright.inverse.bold('Error: note not found.'))
+    }
 }
 
 const saveNotes = (notes) => {
@@ -42,5 +55,6 @@ const loadNotes = () => {
 
 module.exports = {
     getNotes: getNotes(),
-    addNote: addNote
+    addNote: addNote,
+    removeNote: removeNote
 }
