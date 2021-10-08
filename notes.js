@@ -17,9 +17,10 @@ const addNote = (title, body) => {
             body: body
         })
         saveNotes(notes)
-        console.log('The note has been added.')
+        console.log(chalk.blue.inverse.bold('Note successfully added.'))
+
     } else {
-        console.log('The note title is a duplicate; the note has not been added.')
+        console.log(chalk.magentaBright.inverse.bold('The note title is a duplicate; the note has not been added.'))
     }
 }
 
