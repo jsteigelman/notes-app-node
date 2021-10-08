@@ -56,7 +56,7 @@ yargs.command({
     command: 'list',
     describe: 'List notes',
     handler() {
-        console.log('Listing notes')
+        notes.listNotes()
     }
 })
 
