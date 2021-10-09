@@ -1,4 +1,4 @@
-# Notes App
+# Notes App (Node.js Exploration)
 
 This is a basic note-taking app that I created in order to explore the fundamentals of Node.js.
 
