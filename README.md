@@ -8,8 +8,10 @@ This is a basic note-taking app that I built to explore the fundamentals of Node
 	
 ## Functionality
 This note-taking app allows you to ```add```, ```remove```, ```list```, and ```read``` your notes.
-* Add note: ```node app.js add --title="title note" --body="note body here"```
-* Remove note: ```node app.js remove --title="note title here"```
+* Add note: 
+```node app.js add --title="title note" --body="note body here"```
+* Remove note: 
+```node app.js remove --title="note title here"```
 * Read note: ```node app.js read --title="note title here"```
 * List all notes: ```node app.js list```
 
