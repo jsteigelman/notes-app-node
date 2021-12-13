@@ -8,7 +8,7 @@
 ## Built With
 * [Node.js](https://nodejs.org/en/) - JavaScript runtime environment
 * [Yargs](https://www.npmjs.com/package/yargs) - a Node.js library for building interactive command line tools
-* [Chalk](https://www.npmjs.com/package/chalk) - a Node.js module that allows you to add styles to your terminal output
+* [Chalk](https://www.npmjs.com/package/chalk) - a Node.js library that allows you to add styles to your terminal output
 	
 ## Functionality
 This note-taking app allows you to ```add```, ```remove```, ```list```, and ```read``` your notes.
