@@ -15,20 +15,23 @@ This note-taking app allows you to ```add```, ```remove```, ```list```, and ```r
 * Read note: ```node app.js read --title="note title here"```
 * List all notes: ```node app.js list```
 
+## Usage
 ### Add a note
-```node app.js add --title="title note" --body="note body here"```
+```
+node app.js add --title="title note" --body="note body here"
+```
 
 ### Remove a note
 ```
-$| node app.js remove --title="note title here"
+node app.js remove --title="note title here"
 ```
 
 ### Read a note
 ```
-$| node app.js read --title="note title here"
+node app.js read --title="note title here"
 ```
 
 ### List all the notes
 ```
-$| node app.js list
+node app.js list
 ```
