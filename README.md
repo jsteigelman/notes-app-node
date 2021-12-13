@@ -7,9 +7,8 @@ This is a basic note-taking app that I built to explore the fundamentals of Node
 * It also utilizes third-party Node.js libraries, like Yargs and Chalk.
 	
 ## Functionality
-This note-taking app allows you to ```add```, ```remove```, ```list```, and ```read``` your notes.
+This note-taking app allows you to ```add```, ```remove```, ```list```, and ```read``` your notes:
 
-## Usage
 ### Add a note
 ```
 $| node app.js add --title="title note" --body="note body here"
