@@ -13,7 +13,7 @@ const addNote = (title, body) => {
         saveNotes(notes)
         console.log(chalk.blue.inverse.bold('Note successfully added.'))
     } else {
-        console.log(chalk.magentaBright.inverse.bold('The note title is a duplicate; the note has not been added.'))
+        console.log(chalk.red.inverse.bold('The note title is a duplicate; the note has not been added.'))
     }
 }
 
@@ -22,10 +22,10 @@ const removeNote = (title) => {
     const newNotes = notes.filter((note) => note.title !== title)
     
     if (notes.length !== newNotes.length) {
-        console.log(chalk.blue.inverse.bold('Note successfully removed.'))
+        console.log(chalk.magentaBright.inverse.bold('Note successfully removed.'))
         saveNotes(newNotes)
     } else {
-        console.log(chalk.magentaBright.inverse.bold('Error: note not found.'))
+        console.log(chalk.red.inverse.bold('Error: note not found.'))
     }
 }
 
@@ -33,7 +33,7 @@ const listNotes = () => {
     const notes = loadNotes()
     console.log(chalk.green.inverse.bold('Notes List:'))
     notes.forEach((note) => {
-        console.log(note.title)
+        console.log(chalk.green.underline(note.title))
     })
 }
 
@@ -41,8 +41,8 @@ const readNote = (title) => {
     const notes = loadNotes()
     const note = notes.find((note) => note.title === title)
     if (note) {
-        console.log(chalk.green.inverse(note.title))
-        console.log(note.body)
+        console.log(chalk.green.underline(note.title))
+        console.log(chalk.yellow(note.body))
     } else {
         console.log(chalk.red.inverse('Note not found.'))
     }
