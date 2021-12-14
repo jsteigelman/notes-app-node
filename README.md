@@ -13,7 +13,7 @@
 ## Functionality
 This note-taking app allows you to ```add```, ```remove```, ```list```, and ```read``` your notes.
 * Add note: 
-```node app.js add --title="title note" --body="note body here"```
+```node app.js add --title="note title here" --body="note body here"```
 * Remove note: 
 ```node app.js remove --title="note title here"```
 * Read note: ```node app.js read --title="note title here"```
